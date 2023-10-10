@@ -1,0 +1,26 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkitdc.controller.CreateCustomer" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CreateCustomer" showNavButton="false" navButtonPress="handleNavButtonPress" title="Create Customer">
+        <headerContent>
+            <Button id="create" text="Create" press="onCreate" type="Accept"/>
+        </headerContent>
+      <Table id="table1">
+                        <columns>
+                            <Column id="column1" hAlign="End" vAlign="Middle">
+                                <Label id="label1" />
+                            </Column>
+                            <Column id="column2" hAlign="Begin" vAlign="Middle">
+                                <Label id="label2"/>
+                            </Column>
+                        </columns>
+                        <ColumnListItem id="columns" >
+                        <Label id="customeridtext" text="Customer ID:" class="sapUiSmallMarginEnd"/>
+                        <Input id="CustomerID" placeholder="" showSuggestion="false" showValueHelp="false" width="50%"> </Input>
+                        </ColumnListItem>
+                        <ColumnListItem id="columns2">
+                        
+                        <Label id="customernametext" text="Customer Name:" class="sapUiSmallMarginEnd"/>
+                        <Input id="CustomerName" placeholder="" showSuggestion="false" showValueHelp="false" width="50%"> </Input>
+                        </ColumnListItem>
+                    </Table>
+    </Page> 
+</mvc:View>

@@ -1,0 +1,25 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkitdc.controller.CustomerDetails" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails" showNavButton="false" navButtonPress="handleNavButtonPress" title="{CompanyName}" class="sapUiContentPadding" >
+        <headerContent>
+            <Button id="contactinfobutton" text="Show Contact Info" press="onShowContactPress" type="Transparent"/>
+        </headerContent>
+    <Table id="table2" items="{Orders}" class="zebra"> 
+        <columns>
+            <Column id="col1">
+                <Text id="orderid1" text="OrderID" />
+            </Column>
+            <Column id="col2">
+                 <Text id="employee1" text="Employee" />
+            </Column>
+            <Column id="col3">
+                <Text id="orderdate1" text="Order Date" />
+            </Column>
+        </columns>
+        <ColumnListItem id="columns">
+            <Text id="orderid" text="{OrderID}"/>
+            <Text id="employeename" text="{parts: [{path: 'Employee/FirstName'},{path: 'Employee/LastName'}], formatter: '.formatter.formatName'}"/>
+            <Text id="date" text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style: 'medium'}}"/>
+        </ColumnListItem>
+    </Table>
+    </Page> 
+</mvc:View>

@@ -1,0 +1,41 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkitdc.controller.CustomersList" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" showNavButton="false" navButtonPress="handleNavButtonPress" title="CustomersList">
+    <!--  <Page id="page" title="{i18n>title}"> -->
+                <content>
+                    <Carousel id="_IDGenCarousel1" height="10%" class=".pinkBackground">
+                        <pages>
+                            <Image width="30%" id="_IDGenImage1"
+                                src="https://drupal.org/files/Capgemini_Logo_2COL_RGB.png"></Image>
+                            <Image width="30%" id="_IDGenIafae1"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/SAP-Logo.svg/2560px-SAP-Logo.svg.png"></Image>
+                            <Image width="30%" id="_IDGeaafImage1"
+                                src="https://sap.github.io/ui5-tooling/v3/images/UI5_logo_wide.png"></Image>
+                        </pages>
+                        <customLayout>
+                            <CarouselLayout id="_IDGenCarousel2" visiblePagesCount="2" />
+                        </customLayout>
+                    </Carousel>
+                    <Button id="customercreates" text="Create Customer" press="onCustomerCreate" type="Transparent" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom"/>
+                    <Button id="employeelist" text="View Employees" press="onEmployee" type="Transparent" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom"/>
+                    <Table id="table1" items="{/Customers}" class="blueText zebra">
+                        <columns>
+                            <Column id="column1">
+                                <Label id="label1" text="{i18n>companyName}"/>
+                            </Column>
+                            <Column id="column2">
+                                <Label id="label2" text="{i18n>country}"/>
+                            </Column>
+                            <Column id="column3">
+                                <Label id="label3" text="{i18n>phone}"/>
+                            </Column>
+                        </columns>
+                        <ColumnListItem id="columns" type="Navigation" press="onCustomerPress">
+                            <Text id="companyname" text="{CompanyName}"/>
+                            <Text id="country" text="{Country}"/>
+                            <Text id="phone" text="{Phone}"/>
+                        </ColumnListItem>
+                    </Table>
+                </content>
+            <!--   </Page> -->
+    </Page> 
+</mvc:View>
