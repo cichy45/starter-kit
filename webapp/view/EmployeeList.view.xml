@@ -1,33 +1,33 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkitdc.controller.EmployeeList" displayBlock="true">
-<Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="EmployeeList" showNavButton="false" class="sapUiContentPadding" >
-<Table id="table1" items="{path: '/Employees', parameters: {expand: 'Orders'}}">
-                        <columns>
-                            <Column id="column1">
-                                <Label id="label1" text="Name"/>
-                            </Column>
-                            <Column id="column2">
-                                <Label id="label2" text="Position"/>
-                            </Column>
-                            <Column id="column3">
-                                <Label id="label3" text="Orders"/>
-                            </Column>
-                            <Column id="column4">
-                                <Label id="label4" text="Action"/>
-                            </Column>
-                        </columns>
-                        <items>
-                                <ColumnListItem id="_IDGenColumnListItem1" press="onCustomerPress">
-                                    <cells>
-                                        <Text id="_IDGenText1" text="{parts: [{path: 'FirstName'}, {path: 'LastName'}], formatter: '.formatter.formatName'}" />
-                                        <Text id="_IDGenText2" text="{Title}" />
-                                        <Text id="_IDGenText3" text="{path: 'Orders', formatter: '.formatter.sumOrders'} " />
-                                        <FlexBox id="_IDGenFlexBox1" justifyContent="Center">
-                                        <Button id="_IDGenButton1" text="Motivate" class='sapUiSmallMarginEnd' type="Transparent" press="onMotivate"></Button>
-                                        <Button id="_IDGenButton2" text="Fire" class='sapUiSmallMarginEnd' type="Transparent" press = "onFire" ></Button>
-                                        </FlexBox>
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                    </Table>
-</Page>
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="EmployeeList" showNavButton="false" class="sapUiContentPadding" >
+        <Table id="table1" items="{path: '/Employees', parameters: {expand: 'Orders'}}">
+            <columns>
+                <Column id="column1">
+                    <Label id="label1" text="Name"/>
+                </Column>
+                <Column id="column2">
+                    <Label id="label2" text="Position"/>
+                </Column>
+                <Column id="column3">
+                    <Label id="label3" text="Orders"/>
+                    </Column>
+                <Column id="column4">
+                    <Label id="label4" text="Action"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="_IDGenColumnListItem1" press="onCustomerPress">
+                    <cells>
+                        <Text id="_IDGenText1" text="{parts: [{path: 'FirstName'}, {path: 'LastName'}], formatter: '.formatter.formatName'}" />
+                        <Text id="_IDGenText2" text="{Title}" />
+                        <Text id="_IDGenText3" text="{path: 'Orders', formatter: '.formatter.sumOrders'} " />
+                        <FlexBox id="_IDGenFlexBox1" justifyContent="Center">
+                            <Button id="_IDGenButton1" text="Motivate" class='sapUiSmallMarginEnd' type="Transparent" press="onMotivate"></Button>
+                            <Button id="_IDGenButton2" text="Fire" class='sapUiSmallMarginEnd' type="Transparent" press = "onFire" ></Button>
+                        </FlexBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
 </mvc:View>
