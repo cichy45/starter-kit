@@ -29,13 +29,6 @@ sap.ui.define([
                         console.log(JSON.parse(oResponse));
                     }
                 });
-
-                var oModel = new sap.ui.model.json.JSONModel();
-                oModel.loadData("https://evilinsult.com/generate_insult.php?lang=en&type=json").then(function () {
-                            console.log(oModel.getData().insult);
-                            
-                        }
-                    )
                 */
                 var oEmployee = oEvent.getSource().getBindingContext().getObject();
                 var sEmail = oEmployee.FirstName + "." + oEmployee.LastName + "@gmail.com"
