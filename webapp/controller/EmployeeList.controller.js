@@ -15,7 +15,7 @@ sap.ui.define([
                 oRouter
                   .getRoute("EmployeeList")
             },
-            onFire: function(){
+            onFire: function(oEvent){
                 /*
                 $.ajax({
                     url: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
